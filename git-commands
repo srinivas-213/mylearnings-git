@@ -1,0 +1,41 @@
+Git add
+
+Git add -A (--all)
+
+It will stage all modified deleted and deleted files in working directory 
+
+It will add all files even if you are in directory up from home 
+
+Git add -A my_dir/ 
+
+This add the files under that directory but it will not do any changes to the top directory 
+
+Git add -A is default action even if we remove -A
+
+Git add --no-all my-dir/
+
+This will add the file to stage and not make any changes on files which are removed
+
+Git add -u (--update)
+
+It adds all modified and deleted files but not untracked files, it does for entire tree 
+
+Git add -u my_dir/
+
+This will do the same on only my_dir directory 
+
+Git add .
+
+This will add the changes to staging area it looks similar like git add -A as long as you are in top directory 
+
+Change directory and run below command 
+
+Git add .
+
+Add all the changes in current directory and subdirectory but not the top directory 
+
+Git add -A will add all files in the complete working tree 
+
+Git add *
+
+This is not recommended because * is a shell command and it will not consider deleted files and .Git ignore files
