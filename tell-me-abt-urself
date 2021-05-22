@@ -1,0 +1,33 @@
+My name is srinivas and I have 6 years of exp in Devops and build release activities
+
+I have majorly involved in setting up CI CD pipelines from the scrath
+
+
+we use github enterprice for version control sytem
+I have created repositories and assigned permissions to various application teams
+we have integrated jenjins to fetch sorcecode from git
+
+
+we are using jenkins as a continuous integration tool
+I have installed jenkins master slave configurations
+created various jenkins jobs based on constomer requirements
+I have written jenkins files to create pipeline jobs
+I integrated jenkins with nexus artifactory 
+
+
+
+when ever pipeline job runs it will push articats into nexus by using nexux artifact uploader plugin
+
+
+for continuous deployment and configuration management we use ansible
+I have written various playbooks and configured them to remove manual efforts
+
+
+we have splunk for monitoring applications and infrastructure
+
+we hosted few applications into aws cloud where I have working experience on services like EC2, S3,IAM, VPC, autoscaling and elastic load balencer 
+
+
+we are using jira for project integration and tracking purpose
+
+we follow agile with scrum our sprint usually goes for 15 days
