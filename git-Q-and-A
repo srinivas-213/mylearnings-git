@@ -1,0 +1,127 @@
+GIT Q & A:
+
+Git merge & rebase difference:
+---------------------------------
+Merging takes the contents of a source branch and combines them with a target branch, to be more precise. 
+Only the target branch is updated in this process. The history of the source branch remains similar.
+in this process history remains same on source branch
+
+Rebase compresses all the modifications into a single patch. The patch is then inserted into the target branch
+in this process unwanted history is elimenated 
+
+=============================================================================================================================
+
+git revert & reset diff:
+__________________________
+
+revert : this command creates an new commit to undoes the changes frm previous commit.
+git revert <commit id>
+
+reset:  it modifies the index / it changes the commit branch head, where it is pointing to.
+
+git reset hard <commit id>
+
+==============================================================================================================================
+
+git fetch and pull diff:
+__________________________
+
+fetch: it tells local git to retrive the latest metadata info from the original. it doesnt do any file transfer.
+it is just for checking to see any changes available.
+
+pull: this brings the copy of changes from remote repo.
+==============================================================================================================================
+
+how to create a git repo from commandline:
+-----------------------------------------
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com/alexpchin/<reponame>.git
+git push -u origin master
+==============================================================================================================================
+
+how to push git repo into another system:
+-----------------------------------------
+create a new repo by and rename the origin to "upstream"(what ever we want)
+
+git remote rename origin upstream 
+
+git remote add origin <url>
+
+git push origin master
+
+git pull upstream master && git push origin master
+==============================================================================================================================
+
+how to push perticular commit / what is cherry picking :
+-------------------------------------------------------
+Cherry picking is the act of picking a commit from a branch and applying it to another. 
+git cherry-pick can be useful for undoing changes. For example, say a commit is accidently made to the wrong branch. 
+You can switch to the correct branch and cherry-pick the commit to where it should belong.
+===============================================================================================================================
+
+how to merge using tag:
+-----------------------
+git checkout <destination branch> 
+git merge <tag>
+================================================================================================================================
+
+how to push perticular branch to repo:
+___________________________________________
+if local branch name and remote branch name are same:
+
+git push origin <branch>
+
+if local branch name and remote branch name are different:
+
+git push origin <local branch>:<remote branch>
+================================================================================================================================
+git reset hard and soft:
+__________________________
+
+git reset soft:
+this will change the head of the commit and index will be same as previous, if we do commit.. it commits again
+
+git reset hard: 
+
+this will change both head and index to perticular commit.
+=================================================================================================================================
+git bare repo:
+A bare repository is the same as default, but no commits can be made in a bare repository. 
+The changes made in projects cannot be tracked by a bare repository as it doesn’t have a working tree. 
+A working tree is a directory in which all the project files/sub-directories reside. 
+Bare repository is essentially a .git folder with a specific folder where all the project files reside.
+
+==================================================================================================================================
+git bisect:
+------------
+its a debugging tool. which debugs by going through the previous commits since your last working commit.
+git bisect start
+git bisect good <commit id>
+git bisect bad <commit id>
+==================================================================================================================================
+
+how to build a specific file in a git repo from jenkins:
+________________________________________________________
+
+
+
+
+
+
+
+
+=================================================================================================================================
+git stash:
+----------
+
+git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else,
+ and then come back and re-apply them later on. 
+ Stashing is handy if you need to quickly switch context and work on something else,
+ but you're mid-way through a code change and aren't quite ready to commit.
+
+git stash
+git stash pop
+git stash apply
