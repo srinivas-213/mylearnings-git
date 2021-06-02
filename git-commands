@@ -1,5 +1,5 @@
 Git add
-
+---------------------------------------------------------------------------------------------------------------------------
 Git add -A (--all)
 
 It will stage all modified deleted and deleted files in working directory 
